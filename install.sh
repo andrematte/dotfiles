@@ -25,9 +25,9 @@ done
 
 # --------------------------- Running Setup Scripts -------------------------- #
 
-./macOS.sh
-./brew.sh
-./python.sh
-./vscode.sh
+./1-macOS.sh
+./2-brew.sh
+./3-python.sh
+./4-vscode.sh
 
 echo "Installation Complete!"
