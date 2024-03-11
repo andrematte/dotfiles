@@ -87,7 +87,8 @@ apps=(
     "logi-options-plus" 
     "maccy"
     "menubarx"
-    "rectangle"
+    "rectangle" 
+    "reminders-menubar"
     "shottr"
     "stats"
 )
