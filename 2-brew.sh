@@ -43,6 +43,7 @@ packages=(
     "black"
     "node"
     "gifski"
+    "mas"
 )
 
 # Loop over the array to install each application.
@@ -104,14 +105,33 @@ for app in "${apps[@]}"; do
     fi
 done
 
-#TODO Add App Store Applications to Download
-#"appstore" DarkReader for Safari, AdGuard for Safari, Dropover,
-# LanguageTool, LanguageTool for Desktop, Notability, PurePaste,
-# Tampermonkey 
+# --------------------------- Install App Store Apps -------------------------- #
+appstore=(
+    "1440147259"  #AdGuard for Safari
+    "409183694"   #Keynote
+    "408981434"   #iMovie
+    "1438243180"  #Dark Reader for Safari
+    "409201541"   #Pages
+    "1147396723"  #WhatsApp
+    "747648890"   #Telegram
+    "360593530"   #Notability
+    "1233965871"  #ScreenBrush
+    "409203825"   #Numbers
+    1611378436  Pure Paste
+    1482490089  Tampermonkey
+    1534275760  LanguageTool
+    1355679052  Dropover
 
+)
+
+for app in "${appstore[@]}"; do
+    echo "Installing $app from the App Store..."
+    mas install "$app"
+done
+
+#TODO Apps that must be downloaded manually
+# Language Tool Desktop Manually -> https://languagetool.org/
 #TODO Install jetbrains font
 #TODO Configureohmyzsh, Powerlevel10k, etc.
 #TODO Add Miniconda/Python installation
-#TODO Add sign in prompts to every application
-
 #TODO Follow Corey's repository from font-installation onwards
