@@ -39,7 +39,9 @@ packages=(
     "zsh"
     "git"
     "tree"
+    "python"
     "pylint"
+    "pyenv"
     "black"
     "node"
     "gifski"
@@ -60,9 +62,10 @@ done
 # Define an array of applications to install using Homebrew Cask.
 apps=(
     # Apps
+    "chatgpt"
     "discord"
+    "drawio"
     "figma"
-    "gimp"
     "google-chrome"
     "obsidian"
     "vlc"
@@ -70,7 +73,7 @@ apps=(
     
     # Development
     "devtoys"
-    "inkscape"
+    "docker"
     "insomnia"
     "iterm2"
     "visual-studio-code"
@@ -84,12 +87,9 @@ apps=(
     "hiddenbar"
     "keka"
     "keyboardcleantool"
-    "keyclu"
     "logi-options-plus" 
     "maccy"
-    "menubarx"
     "rectangle" 
-    "reminders-menubar"
     "shottr"
     "stats"
 )
@@ -117,10 +117,10 @@ appstore=(
     "360593530"   #Notability
     "1233965871"  #ScreenBrush
     "409203825"   #Numbers
-    1611378436  Pure Paste
-    1482490089  Tampermonkey
-    1534275760  LanguageTool
-    1355679052  Dropover
+    "1611378436"  #Pure Paste
+    "1482490089"  #Tampermonkey
+    "1534275760"  #LanguageTool
+    "1355679052"  #Dropover
 
 )
 
@@ -134,4 +134,5 @@ done
 #TODO Install jetbrains font
 #TODO Configureohmyzsh, Powerlevel10k, etc.
 #TODO Add Miniconda/Python installation
+# Add PyEnv to PATH
 #TODO Follow Corey's repository from font-installation onwards
