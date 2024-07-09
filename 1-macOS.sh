@@ -30,5 +30,4 @@ echo "Complete the installation of XCode Command Line Tools"
 echo "Press any key to continue..."
 read
 
-# ----------------------- Create Main Folder Structure ----------------------- #
-#TODO Implement creation of main folder structure (Documents, Projects, etc.)
+

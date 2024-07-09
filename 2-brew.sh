@@ -39,13 +39,17 @@ packages=(
     "zsh"
     "git"
     "tree"
+    "font-jetbrains-mono-nerd-font"
     "python"
+    "pipx"
     "pylint"
     "pyenv"
     "black"
     "node"
     "gifski"
     "mas"
+    "atuin"
+    "powerlevel10k"
 )
 
 # Loop over the array to install each application.
@@ -57,6 +61,25 @@ for package in "${packages[@]}"; do
         brew install "$package"
     fi
 done
+
+
+# Add the Homebrew zsh to allowed shells
+echo "Changing default shell to Homebrew zsh"
+echo "$(brew --prefix)/bin/zsh" | sudo tee -a /etc/shells >/dev/null
+# Set the Homebrew zsh as default shell
+chsh -s "$(brew --prefix)/bin/zsh"
+
+# Git config name
+echo "Please enter your FULL NAME for Git configuration:"
+read git_user_name
+
+# Git config email
+echo "Please enter your EMAIL for Git configuration:"
+read git_user_email
+
+# Set my git credentials
+$(brew --prefix)/bin/git config --global user.name "$git_user_name"
+$(brew --prefix)/bin/git config --global user.email "$git_user_email"
 
 # --------------------------- Install Applications --------------------------- #
 # Define an array of applications to install using Homebrew Cask.
@@ -129,10 +152,28 @@ for app in "${appstore[@]}"; do
     mas install "$app"
 done
 
-#TODO Apps that must be downloaded manually
-# Language Tool Desktop Manually -> https://languagetool.org/
-#TODO Install jetbrains font
-#TODO Configureohmyzsh, Powerlevel10k, etc.
-#TODO Add Miniconda/Python installation
-# Add PyEnv to PATH
-#TODO Follow Corey's repository from font-installation onwards
+# Update and clean up again for safe measure
+brew update
+brew upgrade
+brew upgrade --cask
+brew cleanup
+
+# ------------------------------- Manual Tasks ------------------------------- #
+
+echo "Open BetterDisplay and activate license. Press enter to continue..."
+read
+
+echo "Open Rectangle and import the settings located in ~/dotfiles/settings/rectangle-config.json. Press enter to continue..."
+read
+
+echo "Open iTerm2 and set it up with the settings located at ~/dotfiles/settings/iterm2-config. Press enter to continue..."
+read
+
+echo "Open Visual Studio Code, log in and sync settings/extensions. Press enter to continue..."
+read
+
+echo "Open Obsidian and set the iCloud vault location. Press enter to continue..."
+read
+
+echo "Open Zotero, log in and setup syncing, install plugins (Better BibTeX, Zutilo, Night for Zotero). Press enter to continue..."
+read
