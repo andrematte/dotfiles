@@ -49,7 +49,8 @@ packages=(
     "gifski"
     "mas"
     "atuin"
-    "powerlevel10k"
+    "bat"
+    "lsd"
 )
 
 # Loop over the array to install each application.
@@ -86,19 +87,21 @@ $(brew --prefix)/bin/git config --global user.email "$git_user_email"
 apps=(
     # Apps
     "chatgpt"
+    "coteditor"
     "discord"
     "drawio"
     "figma"
     "google-chrome"
     "obsidian"
     "vlc"
-    "zotero"
+    "zotero@beta"
     
     # Development
     "devtoys"
     "docker"
     "insomnia"
     "iterm2"
+    "mactex-no-gui"
     "visual-studio-code"
 
     # Tools

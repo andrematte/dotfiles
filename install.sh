@@ -8,6 +8,7 @@
 # 1. Setup MacOS 
 # 2. Setup Homebrew and install packages
 # 3. Setup dev tools
+# 4. Create folders
 
 # -------------------------- Creating Symbolic Links ------------------------- #
 
